@@ -111,7 +111,8 @@ if __name__ == "__main__":
         if epoch %  opt.checkpoint == 0:
             if not os.path.exists(opt.result_path):
                 os.mkdir(opt.result_path)
-            model_out_path = os.path.join(opt.result_path, 'netG_model_epoch_{}.pth'.format(epoch))
+            # model_out_path = os.path.join(opt.result_path, 'netG_model_epoch_{}.pth'.format(epoch))
+            model_out_path = os.path.join(opt.result_path, 'netG_model_epoch.pth')
             states = {
                 'epoch': epoch + 1,
                 'state_dict': {'net_g': net_g.state_dict(), 'net_dI': net_dI.state_dict()},#
